@@ -11,9 +11,9 @@ Stream_Result Print_num(Stream* stream, int num) {
     Str_LenType len = Str_parseNum(num, Str_Decimal, STR_NORMAL_LEN, buf);
     return Stream_writeStr(stream, buf);
 }
-Stream_Result Print_numFix(Stream* stream, int num, Str_Radix base, Str_LenType len) {
+Stream_Result Print_numFix(Stream* stream, int num, Str_Radix base, Str_LenType minLen) {
     char buf[12];
-    Str_LenType len = Str_parseNum(num, base, len, buf);
+    Str_LenType len = Str_parseNum(num, base, minLen, buf);
     return Stream_writeStr(stream, buf);
 }
 Stream_Result Print_unum(Stream* stream, unsigned int num) {
@@ -21,9 +21,9 @@ Stream_Result Print_unum(Stream* stream, unsigned int num) {
     Str_LenType len = Str_parseUNum(num, Str_Decimal, STR_NORMAL_LEN, buf);
     return Stream_writeStr(stream, buf);
 }
-Stream_Result Print_unumFix(Stream* stream, unsigned int num, Str_Radix base, Str_LenType len) {
+Stream_Result Print_unumFix(Stream* stream, unsigned int num, Str_Radix base, Str_LenType minLen) {
     char buf[12];
-    Str_LenType len = Str_parseNum(num, base, len, buf);
+    Str_LenType len = Str_parseNum(num, base, minLen, buf);
     return Stream_writeStr(stream, buf);
 }
 
@@ -44,9 +44,9 @@ Stream_Result Print_long(Stream* stream, long num) {
     Str_LenType len = Str_parseLong(num, Str_Decimal, STR_NORMAL_LEN, buf);
     return Stream_writeStr(stream, buf);
 }
-Stream_Result Print_longFix(Stream* stream, long num, Str_Radix base, Str_LenType len) {
+Stream_Result Print_longFix(Stream* stream, long num, Str_Radix base, Str_LenType minLen) {
     char buf[22];
-    Str_LenType len = Str_parseLongFix(num, base, len, buf);
+    Str_LenType len = Str_parseLong(num, base, minLen, buf);
     return Stream_writeStr(stream, buf);
 }
 Stream_Result Print_ulong(Stream* stream, unsigned long num) {
@@ -54,9 +54,9 @@ Stream_Result Print_ulong(Stream* stream, unsigned long num) {
     Str_LenType len = Str_parseULong(num, Str_Decimal, STR_NORMAL_LEN, buf);
     return Stream_writeStr(stream, buf);
 }
-Stream_Result Print_ulongFix(Stream* stream, unsigned long num, Str_Radix base, Str_LenType len) {
+Stream_Result Print_ulongFix(Stream* stream, unsigned long num, Str_Radix base, Str_LenType minLen) {
     char buf[22];
-    Str_LenType len = Str_parseULongFix(num, base, len, buf);
+    Str_LenType len = Str_parseULong(num, base, len, buf);
     return Stream_writeStr(stream, buf);
 }
 #endif

@@ -23,18 +23,18 @@ extern "C" {
 Stream_Result Print_char(Stream* stream, char c);
 Stream_Result Print_str(Stream* stream, const char *str);
 Stream_Result Print_num(Stream* stream, int num);
-Stream_Result Print_numFix(Stream* stream, int num, Str_Radix base, Str_LenType len);
+Stream_Result Print_numFix(Stream* stream, int num, Str_Radix base, Str_LenType minLen);
 Stream_Result Print_unum(Stream* stream, unsigned int num);
-Stream_Result Print_unumFix(Stream* stream, unsigned int num, Str_Radix base, Str_LenType len);
+Stream_Result Print_unumFix(Stream* stream, unsigned int num, Str_Radix base, Str_LenType minLen);
 
 Stream_Result Print_float(Stream* stream, float num);
 Stream_Result Print_floatFix(Stream* stream, float num, Str_LenType precision);
 
 #if STR_ENABLE_LONG_NUMBER
     Stream_Result Print_long(Stream* stream, long num);
-    Stream_Result Print_longFix(Stream* stream, long num, Str_Radix base, Str_LenType len);
+    Stream_Result Print_longFix(Stream* stream, long num, Str_Radix base, Str_LenType minLen);
     Stream_Result Print_ulong(Stream* stream, unsigned long num);
-    Stream_Result Print_ulongFix(Stream* stream, unsigned long num, Str_Radix base, Str_LenType len);
+    Stream_Result Print_ulongFix(Stream* stream, unsigned long num, Str_Radix base, Str_LenType minLen);
 #endif
 
 #if STR_ENABLE_DOUBLE
