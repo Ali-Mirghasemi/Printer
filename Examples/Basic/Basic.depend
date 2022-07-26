@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1658055235 source:c:\works\libs\embedded-libs\str\src\str.c
+	"Str.h"
+	<string.h>
+
+1658834136 c:\works\libs\embedded-libs\str\src\str.h
+	<string.h>
+
+1658820718 source:c:\works\libs\embedded-libs\stream\src\outputstream.c
+	"OutputStream.h"
+	<string.h>
+
+1658834426 c:\works\libs\embedded-libs\stream\src\outputstream.h
+	"StreamBuffer.h"
+
+1658834394 c:\works\libs\embedded-libs\stream\src\streambuffer.h
+	<stdint.h>
+
+1658834405 source:c:\works\libs\embedded-libs\stream\src\streambuffer.c
+	"StreamBuffer.h"
+	<string.h>
+
+1658836719 source:c:\works\libs\embedded-libs\printer\src\printer.c
+	"Printer.h"
+
+1658836423 c:\works\libs\embedded-libs\printer\src\printer.h
+	"Str.h"
+	"StreamBuffer.h"
+
+1658836737 source:c:\works\libs\embedded-libs\printer\examples\basic\main.c
+	<stdio.h>
+	"StreamBuffer.h"
+	"OutputStream.h"
+	"Printer.h"
+
